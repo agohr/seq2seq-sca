@@ -1,0 +1,9 @@
+tensorflow>=2.12
+numpy
+matplotlib
+scikit-learn
+scipy
+tqdm
+python-Levenshtein
+fuzzywuzzy
+optuna
