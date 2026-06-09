@@ -4,7 +4,7 @@ This repository contains code and data for reproducing the experiments in the pa
 
 We provide some data from the CM0 and CM3 implementations (Bursztein et al., TCHES 2024, see [here](https://github.com/google/scaaml/tree/main/papers/2024/GPAM) for their full datasets) at the low resolution required for our experiments to run. The data given should be sufficient to run training on CM0 and to test zero-shot transfer of a U-Net-CTC model to CM3 after large-scale segmentation of the traces.
 
-For experiments involving CM1 and CM2, please download the datasets from the SCAAML/GPAM repository (see [here](https://github.com/google/scaaml/tree/main/papers/2024/GPAM)).
+For experiments involving CM1 and CM2, or for experiments that involve the full CM0 or CM3 datasets, please download the datasets from the SCAAML/GPAM repository (see [here](https://github.com/google/scaaml/tree/main/papers/2024/GPAM)). After downloading the datasets, use the `resize_data` function in `processing.py` to downsample the traces to the resolution your experiments require.
 
 Pre-trained models are also provided.
 
