@@ -1,4 +1,4 @@
-# Paper Artifact
+# Supplementary Code and Data for the Paper "Robust Single-Trace Full-Key Extraction from Million-Point Traces With Cross-Implementation Transfer"
 
 This repository contains the code and data for reproducing the experiments in the paper.
 
@@ -16,7 +16,7 @@ The rationale for the choice of experiments is to provide a minimal set of exper
 
 **CM0 full-key extraction** (`cm0_subsampler_test_feb_2026.ipynb`): Covers part of the CM0 results from Section 5.1: full-key extraction of all 256 key bits in a single forward pass with the subsampling-based network (with a Random Forest baseline for comparison), after hard low-pass downsampling to 2000 points. The single-byte VGG extraction and the CM1 segmentation pipeline (99%/98.3% per-share accuracy) discussed in Section 5.1 are not included here, as they are superseded by the U-Net-CTC pipeline. 
 
-However, training the subsampling-based network on CM1 is not hard with the tools provided here: one only needs to segment the CM1 traces using the fourier interpolation-based segmentation algorithm in `seglib.py`, identify the two largest segments, upsample them as in the paper, and train on both key shares simultaneously. The training itself works exactly as CM0 training after these dataset perparation steps have been performed.
+However, training the subsampling-based network on CM1 is not hard with the tools provided here: one only needs to segment the CM1 traces using the fourier interpolation-based segmentation algorithm in `seglib.py`, identify the two largest segments, upsample them as in the paper, and train on both key shares simultaneously. The training itself works exactly as CM0 training after these dataset preparation steps have been performed.
 
 **CM0 U-Net transfer to CM3** (`cm0_unet_test_feb_2026.ipynb`): An additional experiment not in the main paper. Tests a U-Net trained on CM0 directly on CM3. Because the CM0 model has never seen the inter-operation regions that appear in CM3 traces, the CM3 traces must first be resampled and then the six scalar-multiplication windows manually cut out at fixed offsets before each segment is decoded independently.
 
@@ -103,3 +103,19 @@ jupyter notebook notebooks/
 ```
 
 The notebooks are self-contained and are, we hope, easy to follow.
+
+## Citing the Paper
+
+If you use this code or data in your own research, please cite the paper as follows:
+
+```bibtex
+@inproceedings{GLL26,
+  author    = {Aron Gohr and Friederike Laus and Gregor Leander},
+  title     = {Robust Single-Trace Full-Key Extraction from Million-Point Traces With Cross-Implementation Transfer},
+  booktitle = {Advances in Cryptology -- {CRYPTO} 2026},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer},
+  year      = {2026},
+}
+```
+
