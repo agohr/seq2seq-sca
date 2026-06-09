@@ -1,6 +1,6 @@
 # Supplementary Code and Data for the Paper "Robust Single-Trace Full-Key Extraction from Million-Point Traces With Cross-Implementation Transfer"
 
-This repository contains the code and data for reproducing the experiments in the paper.
+This repository contains code and data for reproducing the experiments in the paper.
 
 We provide some data from the CM0 and CM3 implementations (Bursztein et al., TCHES 2024, see [here](https://github.com/google/scaaml/tree/main/papers/2024/GPAM) for their full datasets) at the low resolution required for our experiments to run. The data given should be sufficient to run training on CM0 and to test zero-shot transfer of a U-Net-CTC model to CM3 after large-scale segmentation of the traces.
 
