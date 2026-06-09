@@ -12,7 +12,7 @@ The rationale for the choice of experiments is to provide a minimal set of exper
 
 ## Brief Overview of Main Notebooks
 
-**SIFT synthetic task** (`alignment_synthetic.ipynb`, `alignment_synthetic_ctc.ipynb`): These correspond to the SIFT experiments in Sections 3.2 and 5.2 of the paper. `alignment_synthetic.ipynb` reproduces the failure of VGG-like and subsampling-based networks on SIFT-512-32 (cf. Figure 4), illustrating the indexing bottleneck that also appears on real SCAAML data. `alignment_synthetic_ctc.ipynb` shows that U-Net-CTC solves the same task, motivating its use on the real datasets.
+**SIFT synthetic task** (`alignment_synthetic.ipynb`, `alignment_synthetic_ctc.ipynb`): These correspond to the SIFT experiments in Sections 3.2 and 5.2 of the paper. `alignment_synthetic.ipynb` reproduces the failure of VGG-like and subsampling-based networks on SIFT-512-32 (cf. Figure 4), illustrating the indexing bottleneck that also appears on real SCAAML data. `alignment_synthetic_ctc.ipynb` shows that U-Net-CTC solves the same task, which confirms the theoretical expectation that it should.
 
 **CM0 full-key extraction** (`cm0_subsampler_test_feb_2026.ipynb`): Covers part of the CM0 results from Section 5.1: full-key extraction of all 256 key bits in a single forward pass with the subsampling-based network (with a Random Forest baseline for comparison), after hard low-pass downsampling to 2000 points. The single-byte VGG extraction and the CM1 segmentation pipeline (99%/98.3% per-share accuracy) discussed in Section 5.1 are not included here, as they are superseded by the U-Net-CTC pipeline. 
 
