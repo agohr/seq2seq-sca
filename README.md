@@ -10,7 +10,7 @@ Pre-trained models are also provided.
 
 The rationale for the choice of experiments is to provide a minimal set of experiments that demonstrates all the main ideas and results of the paper, and to provide the tools to reproduce all results reported.
 
-Note that there is also an interactive demo of selected techniques and part of the dataset hosted [here][https://kiska-tool.cryptosolutions.de/].
+Note that there is also an interactive demo of selected techniques and part of the dataset hosted [here](https://kiska-tool.cryptosolutions.de/).
 
 ## Brief Overview of Main Notebooks
 
