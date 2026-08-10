@@ -10,6 +10,8 @@ Pre-trained models are also provided.
 
 The rationale for the choice of experiments is to provide a minimal set of experiments that demonstrates all the main ideas and results of the paper, and to provide the tools to reproduce all results reported.
 
+Note that there is also an interactive demo of selected techniques and part of the dataset hosted [here][https://kiska-tool.cryptosolutions.de/].
+
 ## Brief Overview of Main Notebooks
 
 **SIFT synthetic task** (`alignment_synthetic.ipynb`, `alignment_synthetic_ctc.ipynb`): These correspond to the SIFT experiments in Sections 3.2 and 5.2 of the paper. `alignment_synthetic.ipynb` reproduces the failure of VGG-like and subsampling-based networks on SIFT-512-32 (cf. Figure 4), illustrating the indexing bottleneck that also appears on real SCAAML data. `alignment_synthetic_ctc.ipynb` shows that U-Net-CTC solves the same task, which confirms the theoretical expectation that it should.
